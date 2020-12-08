@@ -87,6 +87,6 @@
     }
 
     document.getElementById("button1").onclick = () =>{
-        funcCamera();
-        //getListCamera();
+        //funcCamera();
+        getListCamera();
     }
