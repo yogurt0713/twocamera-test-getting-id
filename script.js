@@ -10,13 +10,14 @@
             console.log("enumerateDevices() not supported.");
             const log = "enumerateDevices() not supported <br>";
             document.getElementById('console_log').innerHTML = log;
+            return;
         }
         
         navigator.mediaDevices.enumerateDevices()
         .then(function(devices){
             devices.forEach(function(device){
                 console.log(device.kind + ": " + device.label + "id = " +device.deviceId);
-                const log = device.kind + ": " + device.label + " <br>";
+                const log = device.kind + ": " + device.id + " <br>";
                 document.getElementById('console_log').innerHTML += log;
         });
         })
