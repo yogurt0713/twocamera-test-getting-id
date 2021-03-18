@@ -13,7 +13,7 @@
             return;
         }
         
-        navigator.webkitGetUserMedia({ audio: true, video: true }, function(){
+        navigator.mediaDevices.getUserMedia({ audio: true, video: true }, function(){
         navigator.mediaDevices.enumerateDevices()
         .then(function(devices){
             devices.forEach(function(device){
