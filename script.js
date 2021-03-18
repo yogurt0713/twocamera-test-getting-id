@@ -20,7 +20,7 @@
                 document.getElementById('console_log').innerHTML = log;
         });
         })
-        .catch(functionn(err){
+        .catch(function(err){
                console.log(err.name + ": " + err.message);
     });
 
