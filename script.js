@@ -12,7 +12,7 @@
             for(let i=0; i!== deviceInfos.length; ++i){
                 let deviceInfo = deviceInfos[i];
 
-                if(deviceInfo.kind == 'videoinput'){
+                if(deviceInfo.kind == 'audioinput'){
                     let deviceId = deviceInfo.deviceId;
                     let label = deviceInfo.label;
                     cameraDeviceIds.push({deviceId, label});
