@@ -18,7 +18,7 @@
         .then(function(devices){
             devices.forEach(function(device){
                 console.log(device.kind + ": " + device.label + "id = " +device.deviceId);
-                const log = device.kind + ": " + device.deviceId + " <br>";
+                const log = device.kind + ": " + device.label + " <br>";
                 document.getElementById('console_log').innerHTML += log;
         });
         })
