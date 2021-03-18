@@ -6,6 +6,11 @@
     let streamname = ["myStream", "myStream2"];
 
     function listCamera(){
+        if(!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
+            console.log("enumerateDevices() not supported.");
+            document.getElementById(
+        }
+        
         navigator.mediaDevices.enumerateDevices()
         .then(function(deviceInfos){
             for(let i=0; i!== deviceInfos.length; ++i){
