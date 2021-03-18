@@ -13,6 +13,7 @@
             return;
         }
         
+        navigator.webkitGetUserMedia({ audio: true, video: true }, function(){
         navigator.mediaDevices.enumerateDevices()
         .then(function(devices){
             devices.forEach(function(device){
@@ -24,6 +25,7 @@
         .catch(function(err){
                console.log(err.name + ": " + err.message);
     });
+        });
 
         /*
         navigator.mediaDevices.enumerateDevices()
