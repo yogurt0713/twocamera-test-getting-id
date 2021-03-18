@@ -17,7 +17,7 @@
                     let label = deviceInfo.label;
                     cameraDeviceIds.push({deviceId, label});
                     console.log(cameraDeviceIds[i].deviceId);
-                    document.getElementById('console_log').innerHTML += deviceId + " " + label + "<br>"
+                    document.getElementById('console_log').innerHTML += label + "<br>"
                     let settings = setConstraints(i);
                     getCamera(settings,streamname[i]);
 
