@@ -8,9 +8,23 @@
     function listCamera(){
         if(!navigator.mediaDevices || !navigator.mediaDevices.enumerateDevices){
             console.log("enumerateDevices() not supported.");
-            document.getElementById(
+            const log = "enumerateDevices() not supported <br>";
+            document.getElementById('console_log').innerHTML = log;
         }
         
+        navigator.mediaDevices.enumerateDevices()
+        .then(function(devices){
+            devices.forEach(function(device){
+                console.log(device.kind + ": " + device.label + "id = " +device.deviceId);
+                const log = device.kind + ": " + device.label + " <br>";
+                document.getElementById('console_log').innerHTML = log;
+        });
+        })
+        .catch(functionn(err){
+               console.log(err.name + ": " + err.message);
+    });
+
+        /*
         navigator.mediaDevices.enumerateDevices()
         .then(function(deviceInfos){
             for(let i=0; i!== deviceInfos.length; ++i){
@@ -32,6 +46,7 @@
              }
 
         });
+        */
     }
 
 
