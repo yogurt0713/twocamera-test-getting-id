@@ -5,7 +5,6 @@
     let cameraDeviceIds = [/* {deviceId, label} */];
     let streamname = ["myStream", "myStream2"];
 
-
     function listCamera(){
         navigator.mediaDevices.enumerateDevices()
         .then(function(deviceInfos){
@@ -17,7 +16,7 @@
                     let label = deviceInfo.label;
                     cameraDeviceIds.push({deviceId, label});
                     console.log(cameraDeviceIds[i].deviceId);
-                    document.getElementById('console_log').innerHTML += label + "<br>"
+                    document.getElementById('console_log').innerHTML = label + "<br>"
                     let settings = setConstraints(i);
                     getCamera(settings,streamname[i]);
 
